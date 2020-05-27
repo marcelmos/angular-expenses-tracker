@@ -1,0 +1,10 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  background: rgb(151, 151, 151);
+  /* text-align: center; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+}

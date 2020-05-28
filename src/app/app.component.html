@@ -2,28 +2,7 @@
 
 <div class="top-part">
   <!-- Formularz dodawania wydatków -->
-  <div class="input-form">
-    <label>
-      <small>Nazwa: </small>
-      <input [(ngModel)]="productName">
-    </label><br>
-    <label>
-      <small>Kwota: </small>
-      <input type="number" [(ngModel)]="productCost"> zł
-    </label><br>
-    <label>
-      <small>Kategoria: </small>
-      <select [(ngModel)]="productType">
-        <option [ngValue]="null" [disabled]="true">Wybierz</option>
-        <option>Art. spożywcze</option>
-        <option>Ubrania</option>
-        <option>Elektronika</option>
-        <option>Usługi comiesieczne</option>
-        <option>Inne</option>
-      </select>
-    </label><br>
-    <button class="btn-add" (click)="addProduct()">Dodaj</button>
-  </div>
+  <app-add-product (addProductEvent)="addProduct($event)"></app-add-product>
 
   <!-- Wydatki za obecny miesiąc -->
   <div class="month-expenses">
@@ -31,31 +10,6 @@
     <h3 *ngIf="monthExpenses">{{monthExpenses}} zł</h3>
   </div>
 </div>
+
 <!-- Lista wszystkich wydatków -->
-<ng-container *ngFor="let testIt of productsArray; let indexId = index">
-<div class="expense-item">
-  <div class="item-top-part">
-    <small>{{testIt.date}}</small>
-    <button class="btn-delete" (click)="deleteProduck(indexId)"></button>
-  </div>
-  <hr>
-  <div class="grid-container">
-    <div class="item-data">
-      <small>Nazwa</small><br>
-      <h2>{{testIt.name}}</h2>
-    </div>
-    <div class="item-data grid-right">
-    </div>
-    <div class="item-data">
-      <small>Kategoria</small>
-      <h2>{{testIt.type}}</h2>
-    </div>
-    <div class="item-data grid-right">
-      <small>Kwota</small>
-      <h2>{{testIt.cost}} zł</h2>
-    </div>
-  </div>
-</div>
-</ng-container>
-
-
+<app-list-product [productsArray]="productsArray" (emitRemove)="deleteProduct($event)"></app-list-product>

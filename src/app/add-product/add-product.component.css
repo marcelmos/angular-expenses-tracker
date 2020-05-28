@@ -1,0 +1,15 @@
+input, select{
+  font-size: 1.25rem;
+  background: none;
+  border-bottom: solid 2px #4b4b4b;
+  border-right: none;
+}
+
+.btn-add{
+  font-size: 1.25rem;
+  background: #707070;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  padding: 5px 10px;
+}

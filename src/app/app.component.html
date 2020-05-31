@@ -5,10 +5,9 @@
   <app-add-product (addProductEvent)="addProduct($event)"></app-add-product>
 
   <!-- Wydatki za obecny miesiąc -->
-  <div class="month-expenses">
-    Wydatki do dnia: {{dateObj | date}}
+  <app-expenses>
     <h3 *ngIf="monthExpenses">{{monthExpenses}} zł</h3>
-  </div>
+  </app-expenses>
 </div>
 
 <!-- Lista wszystkich wydatków -->

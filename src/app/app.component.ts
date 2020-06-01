@@ -24,20 +24,6 @@ export class AppComponent {
     this.addDate = this.year + '-' + this.month + '-' + this.day;
     this.productsArray.push({name: addName, type: addType, cost: addCost, date: this.addDate});
 
-    // Sort array by date
-    this.productsArray = this.productsArray.sort((obj1, obj2) => {
-      const date1 = new Date(obj1.date);
-      const date2 = new Date(obj2.date);
-      return date1 < date2 ? -1 : date1 > date2 ? 1 : 0;
-      });
-
-      console.log(this.productsArray);
-    // this.productsArray = this.productsArray.sort((obj1, obj2) => {
-    //   if (obj1.date < obj2.date){ return 1; }
-    //   if (obj1.date > obj2.date){ return -1; }
-    //   return 0;
-    // });
-
     this.calcMontExpenses();
   }
 
@@ -53,16 +39,5 @@ export class AppComponent {
       if (element.date.slice(0, 7) === todayDate){ expenses = expenses + element.cost; }
     });
     this.monthExpenses = expenses;
-
-    this.productsArray = this.productsArray.sort((obj1, obj2) => {
-      if (obj1.date > obj2.date){
-        return 1;
-      }
-      if (obj1.date < obj2.date){
-        return -1;
-      }
-
-      return 0;
-    });
   }
 }

@@ -16,4 +16,3 @@ You can remove it by pressing "Delete" button.
 - Add auto save and load user data in array by cookies (probably cookies)
 - Set type to 'Other' if not set.
 - Show month name in Polish
-- Code refactoring

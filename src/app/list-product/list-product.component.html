@@ -1,33 +1,45 @@
 <ng-container *ngIf="productsArray.length > 0; else noArrayElements">
   <ng-container *ngFor="let testIt of productsArray; let indexId = index">
-  <div class="expense-item">
-    <div class="item-top-part">
-      <small>{{testIt.date}}</small>
-      <button class="btn-delete" (click)="deleteProduct(indexId)"></button>
+
+    <div class="row">
+      <div class="col-sm-9 col-md-8 expense-item">
+        <!-- Top part -->
+        <div class="row">
+          <div class="col-6">
+            <small>{{testIt.date}}</small>
+          </div>
+          <div class="col-6 text-right">
+            <button class="btn-delete" (click)="deleteProduct(indexId)"></button>
+          </div>
+          <div class="col-12"><hr></div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <small>Nazwa</small><br>
+            <h2>{{testIt.name}}</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <small>Kategoria</small>
+            <h2>{{testIt.type}}</h2>
+          </div>
+
+          <div class="col-6 text-right">
+            <small>Kwota</small>
+            <h2>{{testIt.cost}} zł</h2>
+          </div>
+        </div>
+      </div>
     </div>
-    <hr>
-    <div class="grid-container">
-      <div class="item-data">
-        <small>Nazwa</small><br>
-        <h2>{{testIt.name}}</h2>
-      </div>
-      <div class="item-data grid-right">
-      </div>
-      <div class="item-data">
-        <small>Kategoria</small>
-        <h2>{{testIt.type}}</h2>
-      </div>
-      <div class="item-data grid-right">
-        <small>Kwota</small>
-        <h2>{{testIt.cost}} zł</h2>
-      </div>
-    </div>
-  </div>
   </ng-container>
 </ng-container>
+
+
 <ng-template #noArrayElements>
-  <div class="expense-item">
-    <div class="item-data">
+  <div class="row">
+    <div class="col-12 expense-item">
       <h2 class="noData">Bark danych</h2>
     </div>
   </div>

@@ -4,7 +4,7 @@ hr{
 
 .expense-item{
   background: #b3b3b3;
-  width: 40%;
+  /* width: 40%; */
   margin: 10px auto;
   border-radius: 15px;
   padding: 10px 15px;
@@ -17,18 +17,6 @@ hr{
 .item-data>h2{
   margin: 0;
   color: #4b4b4b;
-}
-
-.grid-container{
-  display: grid;
-  grid-template-columns: 1.5fr 0.75fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1px 1px;
-  grid-template-areas: ". ." ". .";
-}
-
-.grid-right{
-  text-align: right;
 }
 
 .btn-delete{
@@ -65,11 +53,6 @@ hr{
 .btn-delete:hover::before, .btn-delete:hover::after{
   transition: .2s;
   background: #fff;
-}
-
-.item-top-part{
-  display: flex;
-  justify-content: space-between;
 }
 
 .noData{

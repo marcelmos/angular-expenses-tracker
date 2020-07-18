@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter, DoCheck } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
+import { ExpensesService } from '../services/expenses.service';
+import { Product } from '../model/product';
 
 @Component({
   selector: 'app-list-product',
@@ -7,10 +9,13 @@ import { Component, OnInit, Input, Output, EventEmitter, DoCheck } from '@angula
 })
 export class ListProductComponent implements OnInit, DoCheck {
 
-  @Input()
-  productsArray = [];
-  @Output()
-  emitRemove = new EventEmitter<string>();
+  productsArray: Array<Product> = [];
+
+  constructor(private expensesService: ExpensesService) {
+    expensesService.getProductsArrayObs().subscribe((products: Array<Product>) => {
+      this.productsArray = products;
+    });
+  }
 
   ngDoCheck(): void {
     console.log('Changes detected!');
@@ -25,8 +30,8 @@ export class ListProductComponent implements OnInit, DoCheck {
   ngOnInit(): void {
   }
 
-  deleteProduct(indexId){
-    this.emitRemove.emit(indexId);
+  deleteProduct(indexId: number){
+    this.expensesService.deleteProduct(indexId);
   }
 
 }

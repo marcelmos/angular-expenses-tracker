@@ -11,7 +11,8 @@ hr{
 }
 
 .expense-item small{
-  opacity: .5;
+  opacity: .75;
+  font-size: 1.25rem;
 }
 
 .item-data>h2{
@@ -22,6 +23,7 @@ hr{
 .btn-delete{
   border: none;
   background: none;
+  transition: background-color .2;
 }
 
 .btn-delete::before{
@@ -35,6 +37,8 @@ hr{
   -o-transform: rotate(40deg);
   -ms-transform: rotate(40deg);
   transform: rotate(40deg);
+
+  transition: background-color .5s;
 }
 
 .btn-delete::after{
@@ -48,6 +52,8 @@ hr{
   -o-transform: rotate(-40deg);
   -ms-transform: rotate(-40deg);
   transform: rotate(-40deg);
+
+  transition: background-color .5s;
 }
 
 .btn-delete:hover::before, .btn-delete:hover::after{

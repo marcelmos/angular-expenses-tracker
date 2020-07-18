@@ -1,15 +1,44 @@
 input, select{
   font-size: 1.25rem;
+  width: 250px;
   background: none;
-  border-bottom: solid 2px #4b4b4b;
-  border-right: none;
+  border: none;
+  border-bottom: solid 2px rgba(75, 75, 75, 0.6);
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .btn-add{
   font-size: 1.25rem;
-  background: #707070;
+  background: #5c5c5c;
   border: none;
   color: #fff;
   margin-top: 20px;
   padding: 5px 10px;
+}
+
+.btn-add>span::before{
+  content: "";
+  display: inline-block;
+  background: #fff;
+  width: 25px;
+  height: 2px;
+  position: relative;
+  top: -6px;
+  left: 25px;
+}
+
+.btn-add>span::after{
+  content: "";
+  display: inline-block;
+  background: #fff;
+  width: 25px;
+  height: 2px;
+  position: relative;
+  top: -6px;
+  transform: rotate(90deg);
 }

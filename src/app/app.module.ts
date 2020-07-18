@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ListProductComponent } from './list-product/list-product.component';
 import { ExpensesComponent } from './expenses/expenses.component';
+import { ExpensesService } from './services/expenses.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { ExpensesComponent } from './expenses/expenses.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [ExpensesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

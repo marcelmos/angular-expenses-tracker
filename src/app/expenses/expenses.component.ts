@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExpensesService } from '../services/expenses.service';
 
 @Component({
   selector: 'app-expenses',
@@ -9,7 +10,8 @@ export class ExpensesComponent implements OnInit {
 
   dateObj = new Date();
 
-  constructor() { }
+  constructor(public expensesService: ExpensesService) {
+  }
 
   ngOnInit(): void {
   }

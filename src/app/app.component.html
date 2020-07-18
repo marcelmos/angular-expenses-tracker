@@ -1,27 +1,25 @@
 <div class="container">
   <div class="row">
     <div class="col-12">
-      <h2>{{title}}</h2>
+      <h1>{{title}}</h1>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-6">
-      <!-- Formularz dodawania wydatków -->
-      <app-add-product (addProductEvent)="addProduct($event)"></app-add-product>
+    <div class="col-md-6">
+<!-- Formularz dodawania wydatków -->
+      <app-add-product></app-add-product>
     </div>
-    <div class="col-6 text-right">
-      <!-- Wydatki za obecny miesiąc -->
-      <app-expenses>
-        <h3 *ngIf="monthExpenses">{{monthExpenses}} zł</h3>
-      </app-expenses>
+    <div class="col-md-6 text-right">
+<!-- Wydatki za obecny miesiąc -->
+      <app-expenses></app-expenses>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row list-block">
     <div class="col-12">
-      <!-- Lista wszystkich wydatków -->
-      <app-list-product [productsArray]="productsArray" (emitRemove)="deleteProduct($event)"></app-list-product>
+<!-- Lista wszystkich wydatków -->
+      <app-list-product ></app-list-product>
     </div>
   </div>
 

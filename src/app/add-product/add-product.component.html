@@ -1,21 +1,18 @@
 <div class="input-form">
   <label>
-    Nazwa:
-    <input [(ngModel)]="productName">
+    <input [(ngModel)]="productName" placeholder="Nazwa">
   </label><br>
   <label>
-    Kwota:
-    <input type="number" [(ngModel)]="productCost"> zł
+    <input type="number" [(ngModel)]="productCost" placeholder="Kwota"> <span class="h4"> zł</span>
   </label><br>
   <label>
-    Kategoria:
     <select [(ngModel)]="productType">
       <option>Art. spożywcze</option>
       <option>Ubrania</option>
       <option>Elektronika</option>
-      <option>Usługi comiesieczne</option>
+      <option>Usługi comiesięczne</option>
       <option>Inne</option>
     </select>
   </label><br>
-  <button class="btn-add" (click)="addProduct()">Dodaj</button>
+  <button class="btn-add" (click)="addProduct()">Dodaj<span></span></button>
 </div>

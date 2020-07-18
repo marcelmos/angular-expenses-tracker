@@ -1,4 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ExpensesService } from '../services/expenses.service';
+import { Product } from '../model/product';
 
 @Component({
   selector: 'app-add-product',
@@ -11,17 +13,21 @@ export class AddProductComponent implements OnInit {
   productCost: number;
   productType: string;
 
-  @Output()
-  addProductEvent = new EventEmitter<{addName: string, addType: string, addCost: number}>();
+  // @Output()
+  // addProductEvent = new EventEmitter<{addName: string, addType: string, addCost: number}>();
 
-  constructor() { }
+  constructor(private expensesService: ExpensesService) {
+
+  }
 
   ngOnInit(): void {
   }
 
   addProduct(){
-    if(this.productName && this.productCost && this.productType){
-      this.addProductEvent.emit({addName: this.productName, addType: this.productType, addCost: this.productCost});
+    if (this.productName && this.productCost > 0 && this.productType){
+      // this.addProductEvent.emit({addName: , addType: , addCost: });
+      const product: Product = ({name: this.productName, type: this.productType, cost: this.productCost, date: ''});
+      this.expensesService.addProduct(product);
       this.productName = null;
       this.productCost = null;
       this.productType = null;

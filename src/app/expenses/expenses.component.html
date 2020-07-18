@@ -1,5 +1,11 @@
 <div class="month-expenses">
-  <p class="h4">Wydatki do dnia: {{dateObj | date}}</p>
-  <ng-content></ng-content>
-
+  <p class="h4">Miesięczne wydatki do dnia: {{dateObj | date}}</p>
+  <ng-container *ngIf="expensesService.monthExpenses > 0; else noExpensesFound">
+    <h3>{{expensesService.monthExpenses}} zł</h3>
+  </ng-container>
 </div>
+
+<ng-template #noExpensesFound>
+  <h3>Brak wydatków w tym miesiącu.</h3>
+</ng-template>
+

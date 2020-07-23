@@ -3,7 +3,7 @@ hr{
 }
 
 .expense-item{
-  background: #b3b3b3;
+  background: rgba(179, 179, 179, 0.75);
   /* width: 40%; */
   margin: 10px auto;
   border-radius: 15px;

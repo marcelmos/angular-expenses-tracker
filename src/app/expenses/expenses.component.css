@@ -1,5 +1,7 @@
-
-/* h3{
-  text-align: right;
-  margin: 10px auto 20px;
-} */
+select{
+  font-size: 1.25rem;
+  width: 250px;
+  background: none;
+  border: none;
+  border-bottom: solid 2px rgba(75, 75, 75, 0.6);
+}

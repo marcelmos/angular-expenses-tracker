@@ -9,6 +9,8 @@ import { ExpensesService } from '../services/expenses.service';
 export class ExpensesComponent implements OnInit {
 
   dateObj = new Date();
+  filterBy: string;
+
 
   constructor(public expensesService: ExpensesService) {
   }
@@ -16,4 +18,9 @@ export class ExpensesComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  sortBy(){
+    if (this.filterBy){
+      this.expensesService.sortExpenses(this.filterBy);
+    }
+  }
 }

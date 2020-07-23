@@ -11,6 +11,7 @@ export class ExpensesService {
   private productsArrayObs = new BehaviorSubject<Array<object>>([]);
 
   monthExpenses: number;
+  sortedExpensesValue: number;
 
   // Data pre generation
   dateObj = new Date();
@@ -60,6 +61,18 @@ export class ExpensesService {
 
     // console.log(this.monthExpenses);
     this.monthExpenses = calc;
+  }
+
+  // Calc current month expenses but specific type
+  sortExpenses(filterBy){
+    const todayDate = this.year + '-' + this.month;
+    let calc = 0;
+    this.productsArray.forEach(element => {
+      if ((element.date.slice(0, 7) === todayDate) && (element.type === filterBy)){ calc = calc + element.cost; }
+    });
+
+    // console.log(this.monthExpenses);
+    this.sortedExpensesValue = calc;
   }
 
   getProductsArrayObs(): Observable<Array<object>>{

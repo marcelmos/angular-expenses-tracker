@@ -1,18 +1,32 @@
 # ExpensesTracker
 
-App to track your expenses.
+App to track your history of expeses. It's able to show you current month expenses till actual day and allow you to sort data by few filter options. (groceries, clothes, electronic, monthly services and others)
+
+App allow you to add and remove expenses to list.
+
+## INFORMATION
+
+All display data, inputs field are in Polish.
 
 ## How to use
 
 Just insert name of what you bought, insert price and select category.
 
 Under input field after comfirm with button will show you your product with name, category, cost and date.
-You can remove it by pressing "Delete" button.
+You can remove it by pressing "X" button.
+
+## How to run app
+
+If you want to run app on local computer write `ng serve` in console on app directory.
+
+Or use this link to run it as live preview in your web browser.
+[Live Preview](link)
 
 ## Future
 
-- Calculate monthly expenses by checking if array updated/changed.
-- Add filter by month, type of product.
-- Add auto save and load user data in array by cookies (probably cookies)
+- Add filter by month, type of product.     [50%]
+- Add auto save and load user data in array by cookies (probably cookies or Firebase)
 - Set type to 'Other' if not set.
-- Show month name in Polish
+- Extract expenses data array from service file to JSON file.
+
+

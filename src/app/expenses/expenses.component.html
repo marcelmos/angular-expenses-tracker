@@ -12,12 +12,16 @@
       <option>Inne</option>
     </select>
   </p>
-  <ng-container *ngIf="expensesService.sortedExpensesValue > 0">
+  <ng-container *ngIf="expensesService.sortedExpensesValue > 0; else noFilterData">
     <h3>{{expensesService.sortedExpensesValue | number}} zł</h3>
   </ng-container>
 </div>
 
 <ng-template #noExpensesFound>
   <h3>Brak wydatków w tym miesiącu.</h3>
+</ng-template>
+
+<ng-template #noFilterData>
+  <h3>Brak wydatków dla kategorii w tym miesiącu.</h3>
 </ng-template>
 

@@ -6,57 +6,7 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script>
-    function randomBackground() {
-      const bodyElement = document.getElementsByTagName("body")[0];
-      const randomNum = Math.round(Math.random()*5);
-      // const randomNum = 3;
-      console.log(randomNum);
 
-      switch(randomNum){
-        case 1:
-          bodyElement.style = 'background-image: url("assets/images/gorge.jpg")';
-          document.getElementById("add-product").style = 'background-color: rgba(255,255,255,0.5); border-radius: 15px; padding: 10px;';
-          document.getElementById("expenses").style = 'background-color: rgba(255,255,255,0.5); border-radius: 15px; padding: 10px;';
-          document.getElementById("title").style = "color: #fff";
-          break;
-
-        case 2:
-          bodyElement.style = 'background-image: url("assets/images/gorge_2.jpg")';
-          document.getElementById("add-product").style = 'background-color: rgba(255,255,255,0.5); border-radius: 15px; padding: 10px;';
-          document.getElementById("expenses").style = 'background-color: rgba(255,255,255,0.5); border-radius: 15px; padding: 10px;';
-          document.getElementById("title").style = "color: #fff";
-          break;
-
-        case 3:
-          bodyElement.style = 'background-image: url("assets/images/matterhorn.jpg")';
-          document.getElementById("add-product").style = 'color: #dedede; background-color: rgba(48,48,48,0.4); border-radius: 15px; padding: 10px;';
-          document.getElementById("expenses").style = 'color: #dedede; background-color: rgba(48,48,48,0.4); border-radius: 15px; padding: 10px;';
-          break;
-
-        case 4:
-          bodyElement.style = 'background-image: url("assets/images/mountains.jpg")';
-          document.getElementById("add-product").style = 'color: #dedede; background-color: rgba(48,48,48,0.4); border-radius: 15px; padding: 10px;';
-          document.getElementById("expenses").style = 'color: #dedede; background-color: rgba(48,48,48,0.4); border-radius: 15px; padding: 10px;';
-          break;
-
-        case 5:
-          bodyElement.style = 'background-image: url("assets/images/truebsee.jpg")';
-          document.getElementById("add-product").style = 'background-color: rgba(255,255,255,0.5); border-radius: 15px; padding: 10px;';
-          document.getElementById("expenses").style = 'background-color: rgba(255,255,255,0.5); border-radius: 15px; padding: 10px;';
-          document.getElementById("title").style = "color: #fff";
-          break;
-
-        default:
-          bodyElement.style = 'background-image: url("assets/images/truebsee.jpg")';
-          document.getElementById("add-product").style = 'background-color: rgba(255,255,255,0.5); border-radius: 15px; padding: 10px;';
-          document.getElementById("expenses").style = 'background-color: rgba(255,255,255,0.5); border-radius: 15px; padding: 10px;';
-          document.getElementById("title").style = "color: #fff";
-          break;
-      }
-    }
-
-  </script>
 </head>
 <body onload="randomBackground()">
   <app-root></app-root>

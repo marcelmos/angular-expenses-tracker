@@ -3,9 +3,8 @@
 }
 
 body{
-  background-image: url();
-  background-position: center;
-  background-repeat: no-repeat;
+  background: rgb(5,80,87);
+  background: linear-gradient(32deg, rgba(5,80,87,1) 0%, rgba(40,132,166,1) 35%, rgba(0,212,255,1) 100%);
   background-attachment: fixed;
   /* text-align: center; */
   font-family: Verdana, Geneva, Tahoma, sans-serif;

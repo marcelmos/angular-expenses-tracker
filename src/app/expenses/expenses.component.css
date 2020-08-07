@@ -5,3 +5,12 @@ select{
   border: none;
   border-bottom: solid 2px rgba(75, 75, 75, 0.6);
 }
+
+.month-expenses {
+  background: rgba(194, 194, 194, 0.5);
+  border: solid 1px rgba(255, 255, 255, 0.75);
+  margin: 10px auto;
+  border-radius: 15px;
+  padding: 10px 15px;
+  height: 100%;
+}

@@ -17,10 +17,11 @@ You can remove it by pressing "X" button.
 
 ## How to run app
 
-If you want to run app on local computer write `ng serve` in console on app directory.
+If you want to run app on local computer write `ng serve` in console on app directory, then open web page in your browser using adress
+`http://localhost:4200/`.
 
 Or use this link to run it as live preview in your web browser.
-[Live Preview](link)
+[Live Preview](https://stackblitz.com/edit/github-rbgsbg)
 
 ## Future
 

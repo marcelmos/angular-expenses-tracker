@@ -21,7 +21,7 @@ If you want to run app on local computer write `ng serve` in console on app dire
 `http://localhost:4200/`.
 
 Or use this link to run it as live preview in your web browser.
-[Live Preview](https://stackblitz.com/edit/github-rbgsbg)
+[Live Preview](https://stackblitz.com/edit/angular-ivy-ynsp6j)
 
 ## Future
 

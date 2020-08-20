@@ -1,10 +1,17 @@
 <div class="month-expenses" id="expenses">
-  <p class="h4">Miesięczne wydatki do dnia: {{dateObj | date}}</p>
+  <!-- Date filter -->
+  <p class="h4">Wydatki z daty
+    <select [(ngModel)]="filterDate" (change)="sortBy()" [value]="0">
+      <option value="{{actualMonth}}" selected>Aktualny miesiac</option>
+      <option *ngFor="let filterDate of dateArray">{{filterDate}}</option>
+    </select>
+  </p>
   <ng-container *ngIf="expensesService.monthExpenses > 0; else noExpensesFound">
     <h3>{{expensesService.monthExpenses | number}} zł</h3>
   </ng-container>
+  <!-- Product type filter -->
   <p class="h4">Kategoria wydatków:
-    <select [(ngModel)]="filterBy" (change)="sortBy()">
+    <select [(ngModel)]="filterType" (change)="sortBy()">
       <option>Art. spożywcze</option>
       <option>Ubrania</option>
       <option>Elektronika</option>

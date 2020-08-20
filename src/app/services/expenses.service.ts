@@ -7,8 +7,8 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class ExpensesService {
 
-  private productsArray: Array<Product>;
   private productsArrayObs = new BehaviorSubject<Array<object>>([]);
+  productsArray: Array<Product>;
 
   monthExpenses: number;
   sortedExpensesValue: number;

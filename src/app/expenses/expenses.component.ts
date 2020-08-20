@@ -25,10 +25,6 @@ export class ExpensesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    // this.dateArray = this.dateArray.filter((v, i) => this.dateArray.indexOf(v) === i);
-    // console.log('Date filter: ');
-    // console.log(this.dateArray);
-
   }
 
   sortBy(){

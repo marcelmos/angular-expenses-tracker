@@ -1,9 +1,13 @@
 <div class="month-expenses" id="expenses">
   <!-- Date filter -->
   <p class="h4">Wydatki z daty
-    <select [(ngModel)]="filterDate" (change)="sortBy()" [value]="0">
+    <select [(ngModel)]="filterDate" (change)="sortDate()">
       <option value="{{actualMonth}}" selected>Aktualny miesiac</option>
-      <option *ngFor="let filterDate of dateArray">{{filterDate}}</option>
+      <ng-container *ngFor="let filterDate of dateArray">
+        <option *ngIf="filterDate != actualMonth">
+          {{filterDate}}
+        </option>
+      </ng-container>
     </select>
   </p>
   <ng-container *ngIf="expensesService.monthExpenses > 0; else noExpensesFound">
@@ -11,12 +15,12 @@
   </ng-container>
   <!-- Product type filter -->
   <p class="h4">Kategoria wydatków:
-    <select [(ngModel)]="filterType" (change)="sortBy()">
+    <select [(ngModel)]="filterType" (change)="sortType()">
       <option>Art. spożywcze</option>
       <option>Ubrania</option>
       <option>Elektronika</option>
       <option>Usługi comiesięczne</option>
-      <option>Inne</option>
+      <option selected>Inne</option>
     </select>
   </p>
   <ng-container *ngIf="expensesService.sortedExpensesValue > 0; else noFilterData">

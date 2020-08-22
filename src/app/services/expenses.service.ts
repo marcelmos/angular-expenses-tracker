@@ -63,12 +63,23 @@ export class ExpensesService {
     this.monthExpenses = calc;
   }
 
-  // Calc current month expenses but specific type
-  sortExpenses(filterBy){
-    const todayDate = this.year + '-' + this.month;
+  // Calc month/year expenses
+  sortDate(filterDate){
     let calc = 0;
     this.productsArray.forEach(element => {
-      if ((element.date.slice(0, 7) === todayDate) && (element.type === filterBy)){ calc = calc + element.cost; }
+      if (element.date.slice(0, 7) === filterDate){ calc = calc + element.cost; }
+    });
+
+    // console.log(this.monthExpenses);
+    this.monthExpenses = calc;
+  }
+
+  // Calc current month expenses but specific type
+  sortExpenses(filterBy, filterDate){
+    // const todayDate = this.year + '-' + this.month;
+    let calc = 0;
+    this.productsArray.forEach(element => {
+      if ((element.date.slice(0, 7) === filterDate) && (element.type === filterBy)){ calc = calc + element.cost; }
     });
 
     // console.log(this.monthExpenses);

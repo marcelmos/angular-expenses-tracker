@@ -13,12 +13,12 @@ export class ExpensesComponent implements OnInit {
   filterType: string;
   actualMonth = this.dateObj.getFullYear() + '-' + ('0' + (this.dateObj.getMonth() + 1)).slice(-2);
   filterDate: string;
-  dateArray = [];
+  dateArray = [this.actualMonth];
 
   constructor(public expensesService: ExpensesService) {
     expensesService.getProductsArrayObs().subscribe((products: Array<Product>) => {
       this.dateArray = products.map(a => a.date.slice(0, 7));
-      this.dateArray = this.dateArray.filter((v, i) => products.map(a => a.date.slice(0, 7)).indexOf(v) === i).sort((a, b) => a - b);
+      this.dateArray = this.dateArray.filter((v, i) => products.map(a => a.date.slice(0, 7)).indexOf(v) === i);
     });
 
   }
@@ -27,9 +27,15 @@ export class ExpensesComponent implements OnInit {
 
   }
 
-  sortBy(){
+  sortDate() {
+    if (this.filterDate) {
+      this.expensesService.sortDate(this.filterDate);
+    }
+  }
+
+  sortType() {
     if (this.filterType){
-      this.expensesService.sortExpenses(this.filterType);
+      this.expensesService.sortExpenses(this.filterType, this.filterDate);
     }
   }
 }

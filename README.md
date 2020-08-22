@@ -21,7 +21,7 @@ If you want to run app on local computer write `ng serve` in console on app dire
 `http://localhost:4200/`.
 
 Or use this link to run it as live preview in your web browser.
-[Live Preview](https://stackblitz.com/edit/angular-ivy-ynsp6j)
+[Live Preview](https://expenses-tracker-c4k3ry.stackblitz.io) or [Live Preview and Code](https://stackblitz.com/edit/expenses-tracker-c4k3ry?file=src/app/app.component.ts).
 
 ## Future
 

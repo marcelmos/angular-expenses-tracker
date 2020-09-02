@@ -1,18 +1,18 @@
 <div class="input-form" id="add-product">
   <label>
-    <input [(ngModel)]="productName" placeholder="Nazwa">
+    <input [(ngModel)]="productName" placeholder="Name">
   </label><br>
   <label>
-    <input type="number" [(ngModel)]="productCost" placeholder="Kwota"> <span class="h4"> zł</span>
+    <input type="number" [(ngModel)]="productCost" placeholder="Price"> <span class="h4"> zł</span>
   </label><br>
   <label>
     <select [(ngModel)]="productType">
-      <option>Art. spożywcze</option>
-      <option>Ubrania</option>
-      <option>Elektronika</option>
-      <option>Usługi comiesięczne</option>
-      <option selected>Inne</option>
+      <option>Groceries</option>
+      <option>Clothes</option>
+      <option>Electronics</option>
+      <option>Monthly services</option>
+      <option selected>Other</option>
     </select>
   </label><br>
-  <button class="btn-add" (click)="addProduct()">Dodaj<span></span></button>
+  <button class="btn-add" (click)="addProduct()">Add<span></span></button>
 </div>

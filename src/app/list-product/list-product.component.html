@@ -2,7 +2,7 @@
   <ng-container *ngFor="let testIt of productsArray; let indexId = index">
 
     <div class="row">
-      <div class="col-sm-9 col-md-8 expense-item">
+      <div class="col-12 expense-item">
         <!-- Top part -->
         <div class="row">
           <div class="col-6">
@@ -16,18 +16,18 @@
         <!-- Content -->
         <div class="row">
           <div class="col-12">
-            <small>Nazwa</small><br>
+            <small>Name</small><br>
             <h2>{{testIt.name}}</h2>
           </div>
         </div>
         <div class="row">
           <div class="col-6">
-            <small>Kategoria</small>
+            <small>Category</small>
             <h2>{{testIt.type}}</h2>
           </div>
 
           <div class="col-6 text-right">
-            <small>Kwota</small>
+            <small>Price</small>
             <h2>{{testIt.cost}} zł</h2>
           </div>
         </div>
@@ -40,7 +40,7 @@
 <ng-template #noArrayElements>
   <div class="row">
     <div class="col-12 expense-item">
-      <h2 class="noData">Bark danych</h2>
+      <h2 class="noData">No data</h2>
     </div>
   </div>
 </ng-template>

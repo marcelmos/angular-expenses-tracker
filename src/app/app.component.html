@@ -6,17 +6,23 @@
   </div>
 
   <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-12 col-lg-5 list-block">
 <!-- Formularz dodawania wydatków -->
       <app-add-product></app-add-product>
     </div>
-    <div class="col-md-7 text-right">
+    <div class="col-md-12 col-lg-7 text-right list-block">
 <!-- Wydatki za obecny miesiąc -->
       <app-expenses></app-expenses>
     </div>
   </div>
 
   <div class="row list-block">
+    <div class="col-12">
+      <hr>
+    </div>
+  </div>
+
+  <div class="row list-block" style="margin-top: 0;">
     <div class="col-12">
 <!-- Lista wszystkich wydatków -->
       <app-list-product ></app-list-product>

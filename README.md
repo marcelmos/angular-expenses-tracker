@@ -6,7 +6,7 @@ App allow you to add and remove expenses to list.
 
 ## INFORMATION
 
-All display data, inputs field are in Polish.
+All prices are display in PLN.
 
 ## How to use
 
@@ -26,7 +26,7 @@ Or use this link to run it as live preview in your web browser.
 ## Future
 
 - Add filter by month, type of product.     [95%] - Need only add auto value update
-- Add auto save and load user data in array by cookies (probably cookies or Firebase)
+- Add user authentication (probably cookies or Firebase)
 - Set type to 'Other' if not set.
 - Extract expenses data array from service file to JSON file.
 
